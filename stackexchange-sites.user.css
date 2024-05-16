@@ -4,7 +4,7 @@
 @preprocessor   stylus
 @author         tekami ( v1 ) | marslo ( v2 )
 @description    `A StackOverflow theme based on the popular Atom One Dark theme.`
-@version        2.0.1
+@version        2.0.2
 @license        CC-BY-4.0
 @homepageURL    https://github.com/marslo/stylus-stackexchange-sites
 @updateURL      https://github.com/marslo/stackexchange-sites/raw/main/stackexchange-sites.user.css
@@ -655,6 +655,14 @@ body:not(.theme-highcontrast):not(.theme-dark), body:not(.theme-highcontrast).th
   }
   .js-voting-container > button.bg-theme-primary-025 > svg {
     color: var(--so_orange);
+  }
+  /** marslo v2 : for up vote : superuser.com **/
+  .js-voting-container > button:is([aria-pressed="true"]) > svg {
+    color: var(--a_accent1_deep);
+  }
+  .js-voting-container > button:where([aria-pressed="true"]) > svg.iconCheckmarkLg {
+    /** color: #37A1CE !important; **/
+    color: var(--a_blue) !important;
   }
 
   /* "Join Stack Overflow" Floating Banner */
