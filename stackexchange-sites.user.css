@@ -4,7 +4,7 @@
 @preprocessor   stylus
 @author         tekami ( v1 ) | marslo ( v2 )
 @description    `A StackOverflow theme based on the popular Atom One Dark theme.`
-@version        2.0.3
+@version        2.0.4
 @license        CC-BY-4.0
 @homepageURL    https://github.com/marslo/stylus-stackexchange-sites
 @updateURL      https://github.com/marslo/stackexchange-sites/raw/main/stackexchange-sites.user.css
@@ -905,6 +905,14 @@ body:not(.theme-highcontrast):not(.theme-dark), body:not(.theme-highcontrast).th
     background-color: var(--bg2);
     border-color: var(--bg3);
     color: #CCC;
+  }
+
+  .s-input[readonly],
+  .s-textarea[readonly],
+  .is-readonly .s-input,
+  .is-readonly .s-textarea {
+    /** background-color: var(--bg2) !important; **/
+    color: hsl(220, 13%, 37%) !important;
   }
 
   input[type="submit"].btn-secondary,
